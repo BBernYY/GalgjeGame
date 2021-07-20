@@ -1,1 +1,3 @@
 # GalgjeGame
+We made the popular game hangman, in python.
+Nothing too much...
