@@ -11,7 +11,11 @@ def round_check(lives, no_letters, word, wordP):
 def getword(no_letters, word, wordP, letter, lives):
     if letter in word:
         s = list(wordP)
-        s[word.index(letter)] = letter
+        looper = 0
+        for i in word:
+            if i == letter:
+                s[looper] = letter
+            looper += 1
         wordP = "".join(s)
     else:
         no_letters.append(letter)
@@ -28,7 +32,7 @@ def event(e_type, word):
     running = False
 while True:
     d = {}
-    d["no_letters"], d["word"], d["wordP"], d["lives"] = [], random.choice(list(ew.english_words_lower_alpha_set)), "", 11
+    d["no_letters"], d["word"], d["wordP"], d["lives"] = [], random.choice(["louise", "simone", "sytze", "koos"]), "", 11
     for i in range(len(d["word"])):
         d["wordP"] += "_"
     running = True
